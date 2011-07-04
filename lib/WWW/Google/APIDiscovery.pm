@@ -13,7 +13,7 @@ use Readonly;
 use HTTP::Request;
 use LWP::UserAgent;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 Readonly my $API_VERSION => 'v1';
 Readonly my $API =>
 {
@@ -71,7 +71,6 @@ The constructor expects the name of API, you want to know about. Below is valid 
     +-----------------+---------------------------+
 
     use strict; use warnings;
-    use Data::Dumper;
     use WWW::Google::APIDiscovery;
     
     my ($api);
@@ -137,6 +136,7 @@ Returns resource details, if found.
     use WWW::Google::APIDiscovery;
     
     my $api = WWW::Google::APIDiscovery->new('buzz');
+    $api->discover();
     my $resources = $api->get_resources();
 
 =cut
@@ -156,6 +156,7 @@ Returns protocol, if found.
     use WWW::Google::APIDiscovery;
     
     my $api = WWW::Google::APIDiscovery->new('buzz');
+    $api->discover();
     my $protocol = $api->get_protocol();
 
 =cut
@@ -175,6 +176,7 @@ Returns features, if found.
     use WWW::Google::APIDiscovery;
     
     my $api = WWW::Google::APIDiscovery->new('buzz');
+    $api->discover();
     my $features = $api->get_features();
 
 =cut
@@ -194,6 +196,7 @@ Returns version, if found.
     use WWW::Google::APIDiscovery;
     
     my $api = WWW::Google::APIDiscovery->new('buzz');
+    $api->discover();
     my $version = $api->get_version();
 
 =cut
@@ -213,6 +216,7 @@ Returns name, if found.
     use WWW::Google::APIDiscovery;
     
     my $api = WWW::Google::APIDiscovery->new('buzz');
+    $api->discover();
     my $name = $api->get_name();
 
 =cut
@@ -232,6 +236,7 @@ Returns icons details, if found.
     use WWW::Google::APIDiscovery;
     
     my $api = WWW::Google::APIDiscovery->new('buzz');
+    $api->discover();
     my $icons = $api->get_icons();
 
 =cut
@@ -251,6 +256,7 @@ Returns description, if found.
     use WWW::Google::APIDiscovery;
     
     my $api = WWW::Google::APIDiscovery->new('buzz');
+    $api->discover();
     my $description = $api->get_description();
 
 =cut
@@ -270,6 +276,7 @@ Returns base path, if found.
     use WWW::Google::APIDiscovery;
     
     my $api = WWW::Google::APIDiscovery->new('buzz');
+    $api->discover();
     my $base_path = $api->get_base_path();
 
 =cut
@@ -289,6 +296,7 @@ Returns auth details, if found.
     use WWW::Google::APIDiscovery;
     
     my $api = WWW::Google::APIDiscovery->new('buzz');
+    $api->discover();
     my $auth = $api->get_auth();
 
 =cut
@@ -308,6 +316,7 @@ Returns kind details, if found.
     use WWW::Google::APIDiscovery;
     
     my $api = WWW::Google::APIDiscovery->new('buzz');
+    $api->discover();
     my $kind = $api->get_kind();
 
 =cut
@@ -327,6 +336,7 @@ Returns schemas details, if found.
     use WWW::Google::APIDiscovery;
     
     my $api = WWW::Google::APIDiscovery->new('buzz');
+    $api->discover();
     my $schemas = $api->get_schemas();
 
 =cut
@@ -346,6 +356,7 @@ Returns id, if found.
     use WWW::Google::APIDiscovery;
     
     my $api = WWW::Google::APIDiscovery->new('buzz');
+    $api->discover();
     my $id = $api->get_id();
 
 =cut
@@ -365,6 +376,7 @@ Returns title, if found.
     use WWW::Google::APIDiscovery;
     
     my $api = WWW::Google::APIDiscovery->new('buzz');
+    $api->discover();
     my $title = $api->get_title();
 
 =cut
@@ -384,6 +396,7 @@ Returns labels details, if found.
     use WWW::Google::APIDiscovery;
     
     my $api = WWW::Google::APIDiscovery->new('buzz');
+    $api->discover();
     my $labels = $api->get_labels();
 
 =cut
@@ -403,6 +416,7 @@ Returns documentation link, if found.
     use WWW::Google::APIDiscovery;
     
     my $api = WWW::Google::APIDiscovery->new('buzz');
+    $api->discover();
     my $link = $api->get_documentation_link();
 
 =cut
