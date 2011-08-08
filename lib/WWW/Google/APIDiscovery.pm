@@ -13,7 +13,17 @@ use Readonly;
 use HTTP::Request;
 use LWP::UserAgent;
 
-our $VERSION = '0.02';
+=head1 NAME
+
+WWW::Google::APIDiscovery - Interface to Google API Discovery Service.
+
+=head1 VERSION
+
+Version 0.03
+
+=cut
+
+our $VERSION = '0.03';
 Readonly my $API_VERSION => 'v1';
 Readonly my $API =>
 {
@@ -25,16 +35,6 @@ Readonly my $API =>
     'prediction'      => "https://www.googleapis.com/discovery/$API_VERSION/apis/prediction/v1.2/rest",
     'urlshortener'    => "https://www.googleapis.com/discovery/$API_VERSION/apis/urlshortener/v1/rest",
 };
-
-=head1 NAME
-
-WWW::Google::APIDiscovery - Interface to Google API Discovery Service.
-
-=head1 VERSION
-
-Version 0.01
-
-=cut
 
 =head1 DESCRIPTION
 
@@ -469,6 +469,8 @@ L<http://search.cpan.org/dist/WWW-Google-APIDiscovery/>
 
 =head1 LICENSE AND COPYRIGHT
 
+Copyright 2011 Mohammad S Anwar.
+
 This  program  is  free  software; you can redistribute it and/or modify it under the terms of
 either:  the  GNU  General Public License as published by the Free Software Foundation; or the
 Artistic License.
@@ -484,5 +486,6 @@ without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
 
 __PACKAGE__->meta->make_immutable;
 no Moose; # Keywords are removed from the WWW::Google::APIDiscovery package
+no Moose::Util::TypeConstraints;
 
 1; # End of WWW::Google::APIDiscovery

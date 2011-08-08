@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.66.
+signed via the Module::Signature module, version 0.68.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,25 +14,25 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 e8be512c4b2515157cc1476120f091c9a3087a01 Build.PL
-SHA1 f2970b8e97193223abcf019197111c2382ba14f5 Changes
+SHA1 f52bc28adf2a3d8f751dc19af12ad47b14017710 Build.PL
+SHA1 3a0b10bc1ec6a9d6bde3e9eff607310ce60513de Changes
 SHA1 697d56e34148a73343dea0aafc80f04da9084fa8 MANIFEST
 SHA1 7d20e4e840781030202bb045d5ab81b3fd1b68b0 MANIFEST.SKIP
-SHA1 6854cdabdee0a5f99437c966bf841eab5ae1cd1e META.yml
-SHA1 bb43ccc80feb06e8cfaeb89742ecadf5fccefc67 Makefile.PL
+SHA1 bfadcdf5f511979cd9aa4571c76e4cf3d5dd21d7 META.yml
+SHA1 b57ee3ae14d8753d8797c52a0c001f9195d90e48 Makefile.PL
 SHA1 410b7e60421c1e598f1e47eacf4e4ce43628be05 README
-SHA1 c144af4c0ad2b83df1169d06ff3d495ce39e545b lib/WWW/Google/APIDiscovery.pm
+SHA1 23f18879b017a4664c7d60204fb63f756617057f lib/WWW/Google/APIDiscovery.pm
 SHA1 7a7d4faad72294e6b0b377a5006929f7659e6986 t/00-load.t
 SHA1 2b8ffb7e4f399af95d092743846ac8d438f2c53e t/manifest.t
 SHA1 0765c9ff0cc4319f415bb08d0053b7717a8284a2 t/pod.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.14 (MingW32)
 
-iQEcBAEBAgAGBQJOEYbcAAoJEPYcXBXhRYOhBRkH/3tZH5Kk2loVaNULdO3AfMEU
-Au5qteDpzDz4LDtcbvGOs5dNGzBQ4tXjEuqc6PIc6k6aHQjA01eYtRZpiZa7cVep
-dODouaj/OxU5EOQnobYrqJ2HgVp3jc69a06EUC+HlNlNoVZ5I05LXyCUCZXzvDBi
-kemnQyt5S09JyycZQ99TXtHDozI/wKEp+aiX8ouxKwVoWteHWmM6rHxzgrFdD1yK
-qVdt55PcrBl0RxRXNNHkW8sHL8Qk9xkSESYOyWCHOpb28SqPXU1k6PR7I4tAgO9o
-v6/0uq77pYXslWvwFtgRCp1Cu1Z560qJUrVsbhzoIDLurIQMX3x8TJuJt3jWUoI=
-=xFRL
+iQEcBAEBAgAGBQJOP8oOAAoJEPYcXBXhRYOh6dIH/RQmK1iLTcXSAmuGgDTm0Yfk
+ALZtcPkkK+z8UcVSjlnPXmVE5FRP386HvMvsPhvmxbojy/4krcDToJDuKh/rADhl
++tigKLUqB/FYL9W8gRLc80TwNNLGfQr9RDBkAKX5Vs/wAE9TJfF0i5LiFN1zw0ap
+NUq5OxTilgETzfrCvdF7+fU7UXhMdsBGdeGTTkFOoiHLLC60culYns9I7tzWKNax
+FNEa0F/MObF0HOADhH7MFerkqSJ6cr0OGNPDk95XIWwzKPOK5g2hHIcvkERRAZqR
+S0SfFhMi1MzpLmt8TalcxgO3LTc6iFRlVMbyEw9LVU7FLvprnW+vW34DbG9frrM=
+=shhw
 -----END PGP SIGNATURE-----

@@ -1,5 +1,9 @@
 Revision history for WWW-Google-APIDiscovery
 
+0.03    Mon Aug 08 12:34:11 2011
+        - Made Readonly v1.03 as minimum requirement.
+        - Prepared the distribution using the Module::Signature v0.68.
+
 0.02    Mon Jul 04 10:22:23 2011
         - Corrected the examples in the pod.
 
