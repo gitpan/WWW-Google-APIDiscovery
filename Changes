@@ -1,5 +1,9 @@
 Revision history for WWW-Google-APIDiscovery
 
+0.04    Mon Sep 12 12:13:14 2011
+        - Added Result handle class for WWW::Google::APIDiscovery module.
+        - Added unit test.
+
 0.03    Mon Aug 08 12:34:11 2011
         - Made Readonly v1.03 as minimum requirement.
         - Prepared the distribution using the Module::Signature v0.68.

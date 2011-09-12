@@ -12,6 +12,7 @@ use JSON;
 use Readonly;
 use HTTP::Request;
 use LWP::UserAgent;
+use WWW::Google::APIDiscovery::Result;
 
 =head1 NAME
 
@@ -19,11 +20,11 @@ WWW::Google::APIDiscovery - Interface to Google API Discovery Service.
 
 =head1 VERSION
 
-Version 0.03
+Version 0.04
 
 =cut
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 Readonly my $API_VERSION => 'v1';
 Readonly my $API =>
 {
@@ -105,13 +106,15 @@ around BUILDARGS => sub
 
 =head2 discover()
 
-Returns everything about the given API.
+Returns result object of type L<WWW::Google::APIDiscovery::Result> which can be probed further
+for more information.
 
     use strict; use warnings;
     use WWW::Google::APIDiscovery;
     
     my $api = WWW::Google::APIDiscovery->new('buzz');
     my $result = $api->discover();
+	print "Title: [" . $result->api_title() . "]\n";
 
 =cut
 
@@ -124,308 +127,9 @@ sub discover
     my $response = $browser->request($request);
     croak("ERROR: Couldn't fetch url [$url][".$response->status_line."]\n")
         unless $response->is_success;
-    $self->{content} = from_json($response->content);
-    return $self->{content};
-}
-
-=head2 get_resources()
-
-Returns resource details, if found.
-
-    use strict; use warnings;
-    use WWW::Google::APIDiscovery;
-    
-    my $api = WWW::Google::APIDiscovery->new('buzz');
-    $api->discover();
-    my $resources = $api->get_resources();
-
-=cut
-
-sub get_resources
-{
-    my $self = shift;
-    return 'Not defined' unless (defined($self->{content}) && exists $self->{content}->{resources});
-    return $self->{content}->{resources};
-}
-
-=head2 get_protocol()
-
-Returns protocol, if found.
-
-    use strict; use warnings;
-    use WWW::Google::APIDiscovery;
-    
-    my $api = WWW::Google::APIDiscovery->new('buzz');
-    $api->discover();
-    my $protocol = $api->get_protocol();
-
-=cut
-
-sub get_protocol
-{
-    my $self = shift;
-    return 'Not defined' unless (defined($self->{content}) && exists $self->{content}->{protocol});
-    return $self->{content}->{protocol};
-}
-
-=head2 get_features()
-
-Returns features, if found.
-
-    use strict; use warnings;
-    use WWW::Google::APIDiscovery;
-    
-    my $api = WWW::Google::APIDiscovery->new('buzz');
-    $api->discover();
-    my $features = $api->get_features();
-
-=cut
-
-sub get_features
-{
-    my $self = shift;
-    return 'Not defined' unless (defined($self->{content}) && exists $self->{content}->{features});
-    return $self->{content}->{features};
-}
-
-=head2 get_version()
-
-Returns version, if found.
-
-    use strict; use warnings;
-    use WWW::Google::APIDiscovery;
-    
-    my $api = WWW::Google::APIDiscovery->new('buzz');
-    $api->discover();
-    my $version = $api->get_version();
-
-=cut
-
-sub get_version
-{
-    my $self = shift;
-    return 'Not defined' unless (defined($self->{content}) && exists $self->{content}->{version});
-    return $self->{content}->{version};
-}
-
-=head2 get_name()
-
-Returns name, if found.
-
-    use strict; use warnings;
-    use WWW::Google::APIDiscovery;
-    
-    my $api = WWW::Google::APIDiscovery->new('buzz');
-    $api->discover();
-    my $name = $api->get_name();
-
-=cut
-
-sub get_name
-{
-    my $self = shift;
-    return 'Not defined' unless (defined($self->{content}) && exists $self->{content}->{name});
-    return $self->{content}->{name};
-}
-
-=head2 get_icons()
-
-Returns icons details, if found.
-
-    use strict; use warnings;
-    use WWW::Google::APIDiscovery;
-    
-    my $api = WWW::Google::APIDiscovery->new('buzz');
-    $api->discover();
-    my $icons = $api->get_icons();
-
-=cut
-
-sub get_icons
-{
-    my $self = shift;
-    return 'Not defined' unless (defined($self->{content}) && exists $self->{content}->{icons});
-    return $self->{content}->{icons};
-}
-
-=head2 get_description()
-
-Returns description, if found.
-
-    use strict; use warnings;
-    use WWW::Google::APIDiscovery;
-    
-    my $api = WWW::Google::APIDiscovery->new('buzz');
-    $api->discover();
-    my $description = $api->get_description();
-
-=cut
-
-sub get_description
-{
-    my $self = shift;
-    return 'Not defined' unless (defined($self->{content}) && exists $self->{content}->{description});
-    return $self->{content}->{description};
-}
-
-=head2 get_base_path()
-
-Returns base path, if found.
-
-    use strict; use warnings;
-    use WWW::Google::APIDiscovery;
-    
-    my $api = WWW::Google::APIDiscovery->new('buzz');
-    $api->discover();
-    my $base_path = $api->get_base_path();
-
-=cut
-
-sub get_base_path
-{
-    my $self = shift;
-    return 'Not defined' unless (defined($self->{content}) && exists $self->{content}->{basePath});
-    return $self->{content}->{basePath};
-}
-
-=head2 get_auth()
-
-Returns auth details, if found.
-
-    use strict; use warnings;
-    use WWW::Google::APIDiscovery;
-    
-    my $api = WWW::Google::APIDiscovery->new('buzz');
-    $api->discover();
-    my $auth = $api->get_auth();
-
-=cut
-
-sub get_auth
-{
-    my $self = shift;
-    return 'Not defined' unless (defined($self->{content}) && exists $self->{content}->{auth});
-    return $self->{content}->{auth};
-}
-
-=head2 get_kind()
-
-Returns kind details, if found.
-
-    use strict; use warnings;
-    use WWW::Google::APIDiscovery;
-    
-    my $api = WWW::Google::APIDiscovery->new('buzz');
-    $api->discover();
-    my $kind = $api->get_kind();
-
-=cut
-
-sub get_kind
-{
-    my $self = shift;
-    return 'Not defined' unless (defined($self->{content}) && exists $self->{content}->{kind});
-    return $self->{content}->{kind};
-}
-
-=head2 get_schemas()
-
-Returns schemas details, if found.
-
-    use strict; use warnings;
-    use WWW::Google::APIDiscovery;
-    
-    my $api = WWW::Google::APIDiscovery->new('buzz');
-    $api->discover();
-    my $schemas = $api->get_schemas();
-
-=cut
-
-sub get_schemas
-{
-    my $self = shift;
-    return 'Not defined' unless (defined($self->{content}) && exists $self->{content}->{schemas});
-    return $self->{content}->{schemas};
-}
-
-=head2 get_id()
-
-Returns id, if found.
-
-    use strict; use warnings;
-    use WWW::Google::APIDiscovery;
-    
-    my $api = WWW::Google::APIDiscovery->new('buzz');
-    $api->discover();
-    my $id = $api->get_id();
-
-=cut
-
-sub get_id
-{
-    my $self = shift;
-    return 'Not defined' unless (defined($self->{content}) && exists $self->{content}->{id});
-    return $self->{content}->{id};
-}
-
-=head2 get_title()
-
-Returns title, if found.
-
-    use strict; use warnings;
-    use WWW::Google::APIDiscovery;
-    
-    my $api = WWW::Google::APIDiscovery->new('buzz');
-    $api->discover();
-    my $title = $api->get_title();
-
-=cut
-
-sub get_title
-{
-    my $self = shift;
-    return 'Not defined' unless (defined($self->{content}) && exists $self->{content}->{title});
-    return $self->{content}->{title};
-}
-
-=head2 get_labels()
-
-Returns labels details, if found.
-
-    use strict; use warnings;
-    use WWW::Google::APIDiscovery;
-    
-    my $api = WWW::Google::APIDiscovery->new('buzz');
-    $api->discover();
-    my $labels = $api->get_labels();
-
-=cut
-
-sub get_labels
-{
-    my $self = shift;
-    return 'Not defined' unless (defined($self->{content}) && exists $self->{content}->{labels});
-    return $self->{content}->{labels};
-}
-
-=head2 get_documentation_link()
-
-Returns documentation link, if found.
-
-    use strict; use warnings;
-    use WWW::Google::APIDiscovery;
-    
-    my $api = WWW::Google::APIDiscovery->new('buzz');
-    $api->discover();
-    my $link = $api->get_documentation_link();
-
-=cut
-
-sub get_documentation_link
-{
-    my $self = shift;
-    return 'Not defined' unless (defined($self->{content}) && exists $self->{content}->{documentationLink});
-    return $self->{content}->{documentationLink};
+    my $content  = from_json($response->content);
+    croak("ERROR: No data found.\n") unless defined $content;
+    return WWW::Google::APIDiscovery::Result->new($content);
 }
 
 =head1 AUTHOR
