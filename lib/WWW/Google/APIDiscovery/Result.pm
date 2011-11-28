@@ -3,7 +3,7 @@ package WWW::Google::APIDiscovery::Result;
 use Carp;
 use Data::Dumper;
 
-use Mouse;
+use Moose;
 
 =head1 NAME
 
@@ -11,11 +11,11 @@ WWW::Google::APIDiscovery::Result - Result handler for the module WWW::Google::A
 
 =head1 VERSION
 
-Version 0.04
+Version 0.05
 
 =cut
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 =head1 DESCRIPTION
 

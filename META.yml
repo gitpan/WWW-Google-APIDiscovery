@@ -23,10 +23,10 @@ name: WWW-Google-APIDiscovery
 provides:
   WWW::Google::APIDiscovery:
     file: lib/WWW/Google/APIDiscovery.pm
-    version: 0.04
+    version: 0.05
   WWW::Google::APIDiscovery::Result:
     file: lib/WWW/Google/APIDiscovery/Result.pm
-    version: 0.04
+    version: 0.05
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.04
+version: 0.05

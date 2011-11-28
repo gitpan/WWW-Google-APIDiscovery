@@ -1,7 +1,10 @@
 Revision history for WWW-Google-APIDiscovery
 
+0.05    Mon Nov 28 12:27:01 2011
+        - Importing Moose instead of Mouse in the Result class.
+
 0.04    Mon Sep 12 12:13:14 2011
-        - Added Result handle class for WWW::Google::APIDiscovery module.
+        - Added Result handler class for WWW::Google::APIDiscovery module.
         - Added unit test.
 
 0.03    Mon Aug 08 12:34:11 2011

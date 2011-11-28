@@ -20,11 +20,11 @@ WWW::Google::APIDiscovery - Interface to Google API Discovery Service.
 
 =head1 VERSION
 
-Version 0.04
+Version 0.05
 
 =cut
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 Readonly my $API_VERSION => 'v1';
 Readonly my $API =>
 {
@@ -114,7 +114,7 @@ for more information.
     
     my $api = WWW::Google::APIDiscovery->new('buzz');
     my $result = $api->discover();
-	print "Title: [" . $result->api_title() . "]\n";
+    print "Title: [" . $result->api_title() . "]\n";
 
 =cut
 
