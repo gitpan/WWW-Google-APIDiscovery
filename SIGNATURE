@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.68.
+signed via the Module::Signature module, version 0.73.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,27 +14,27 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 f52bc28adf2a3d8f751dc19af12ad47b14017710 Build.PL
-SHA1 f9cef889096f317ae4022e22b2b4200185e56279 Changes
-SHA1 4a2d57fa625c9a72a2449472d1836d6ad2d7efb2 MANIFEST
-SHA1 7d20e4e840781030202bb045d5ab81b3fd1b68b0 MANIFEST.SKIP
-SHA1 a24bc8c28a069783d642214775a883c9b060abfe META.yml
-SHA1 b57ee3ae14d8753d8797c52a0c001f9195d90e48 Makefile.PL
-SHA1 410b7e60421c1e598f1e47eacf4e4ce43628be05 README
-SHA1 eb9fd6a227e6d97caad66fc09da9e32916e649e6 lib/WWW/Google/APIDiscovery.pm
-SHA1 bc2b23c78c128e8ea550c20f7c814a0235160165 lib/WWW/Google/APIDiscovery/Result.pm
-SHA1 7a7d4faad72294e6b0b377a5006929f7659e6986 t/00-load.t
-SHA1 2e7a52455ab36670fb1aebe9a086dd64a8440914 t/01-new.t
-SHA1 2b8ffb7e4f399af95d092743846ac8d438f2c53e t/manifest.t
-SHA1 0765c9ff0cc4319f415bb08d0053b7717a8284a2 t/pod.t
+SHA1 29f5ded888e33df16a54c4d8b8f954836eae41db Changes
+SHA1 0b44730acca4465aabafa762183766fbfe5d89af MANIFEST
+SHA1 5f29cdcbfacb9c46ac155fff9844aceeb064aef1 MANIFEST.SKIP
+SHA1 4c2d83605eada528721be9671b2970c3703739c3 Makefile.PL
+SHA1 c83ab165aa4c1e07147a0430766f5bf43d29b1d5 README
+SHA1 6a75079f2134fa6c4f4e05ca2ea42875884a7e01 lib/WWW/Google/APIDiscovery.pm
+SHA1 f66d8c5c25269ed481f4448ef738c23f2bbcd097 lib/WWW/Google/APIDiscovery/API.pm
+SHA1 dd219181c58b685a29b266a013040572ec2d2e34 lib/WWW/Google/APIDiscovery/API/MetaData.pm
+SHA1 ef7242a8aeed74b1427b3fb434fb68110a13502f t/00-load.t
+SHA1 1d5edbc35698138ec227b301f5e296d903a5a524 t/01-new.t
+SHA1 6f3d048a9660f673b3435c04318946c5ff4f2b56 t/02-discover.t
+SHA1 3e86d3e277d4233e55b8a4555bf6edf2dcdf7bd0 t/manifest.t
+SHA1 a572bbed348e70b106f01fa02fee8b8edd6735d5 t/pod.t
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2.0.14 (MingW32)
+Version: GnuPG v1
 
-iQEcBAEBAgAGBQJO04EBAAoJEPYcXBXhRYOhGZkH/2oWzSQ8utbAiCWTtbZjWzGu
-x3Jk9t+Umxnj18kTRbnmLPNfJ0+xDlVWH/6ZKU1BMrGjsORYjLjQQGGEui6af4Ne
-qgexbjertWy8kSODJYOO+RFbXbvBt+2TCv2UBXEAgPDuD+wOkpDSYYQqSndmLgkm
-GbfqMfCxY12QOBtDIjXaJ0p5oR+x2tgC+RqNTYOgzEdCdne6q8SW6Zd5+3LeZQFi
-ODNY8c14PqWHlrnLpjO+CBq8lWQ1sZngy7QLZwee+N3jt2LgRm+2EijeyJld+ZJg
-lFh3H+59lxRCugBYvLt9FYPjAcLm25Q5hiEuFbZVgs98VbDmcUcrTpC+BX2c1gA=
-=2OQd
+iQEcBAEBAgAGBQJT3FFqAAoJENoXJXWo7C/plV4IAMBoj07flv4L8Wf1XInWiRL6
+SDaAIwJheSv0y0VVE30TDhjZ4TLSBc/Dyu7+C/8JODpeT3LwK5QrQKlh3iFDySWm
+bkX6N0BBObybFDXo4NWB5V7BECugItbu23ok5vEk866S9DR7n0ruwlnf6GqjWn32
+/stdcTRnO/UFk/SSgGqxyPzCd70x4NM1WxVStdnhHtBYM7aQVdOFU7k+9/YjpUKN
+tFHN2pS4nxcDlJecn7kZPLOIAJv9tHLNV9+/7YL5ytVZJ9FlO0nCHJj7/IC7+e80
+iuQe2GUwpJmMbxHw/D0Yh1YrT8L72H0wgLFJi5Vh8mkI+oLye6H0oMpbTYsmd3A=
+=qemp
 -----END PGP SIGNATURE-----

@@ -1,5 +1,9 @@
 Revision history for WWW-Google-APIDiscovery
 
+0.06    Sat Aug 02 03:18:11 2014
+        - Re-structured the code using 'Moo'
+        - Made the result object
+
 0.05    Mon Nov 28 12:27:01 2011
         - Importing Moose instead of Mouse in the Result class.
 

@@ -1,22 +1,14 @@
-package WWW::Google::APIDiscovery;
+package WWW::Google::APIDiscovery::API;
 
-$WWW::Google::APIDiscovery::VERSION = '0.06';
+$WWW::Google::APIDiscovery::API::VERSION = '0.06';
 
 use 5.006;
-use JSON;
-use Data::Dumper;
-
-use WWW::Google::UserAgent;
-use WWW::Google::APIDiscovery::API;
-use WWW::Google::APIDiscovery::API::MetaData;
-
 use Moo;
 use namespace::clean;
-extends 'WWW::Google::UserAgent';
 
 =head1 NAME
 
-WWW::Google::APIDiscovery - Interface to Google API Discovery Service.
+WWW::Google::APIDiscovery::API - Placeholder for supported APIS.
 
 =head1 VERSION
 
@@ -24,97 +16,12 @@ Version 0.06
 
 =cut
 
-our $BASE_URL = 'https://www.googleapis.com/discovery/v1/apis';
-
-has apis    => (is => 'rw');
-has kind    => (is => 'rw');
-has version => (is => 'rw');
-
-=head1 DESCRIPTION
-
-The  Google  APIs  Discovery  Service  allows you to interact with Google APIs by
-exposing machine readable metadata about other  Google APIs through a simple API.
-Currently supports version v1.
-
-IMPORTANT:The version v1 of the Google APIs Discovery Service is in Labs  and its
-features might change unexpectedly until it graduates.
-
-=head1 SYNOPSIS
-
-    use strict; use warnings;
-    use WWW::Google::APIDiscovery;
-
-    my $google = WWW::Google::APIDiscovery->new();
-    my $meta   = $google->discover('customsearch:v1');
-
-    print "Title: ", $meta->api_title, "\n";
-
-=cut
-
-sub BUILDARGS {
-    my ($class, $args) = @_;
-
-    die "ERROR: No parameters required for constructor."
-        if defined $args;
-
-    return { api_key => 'Dummy' };
-};
-
-sub BUILD {
-    my ($self) = @_;
-
-    $self->_supported_apis;
-}
-
-=head1 METHODS
-
-=head2 discover()
-
-Returns meta data of the API of type L<WWW::Google::APIDiscovery::API::MetaData>.
-
-=cut
-
-sub discover {
-    my ($self, $api_id) = @_;
-
-    die "ERROR: Missing mandatory param: api_id" unless defined $api_id;
-
-    my $api = $self->{apis}->{$api_id};
-    die "ERROR: Unsupported API [$api_id]" unless defined $api;
-
-    my $response = $self->get($api->url);
-    my $contents = from_json($response->{content});
-
-    die Dumper($contents);
-}
-
-sub _supported_apis {
-    my ($self) = @_;
-
-    my $response = $self->get($BASE_URL);
-    my $contents = from_json($response->{content});
-
-    $self->kind($contents->{kind});
-    $self->version($contents->{discoveryVersion});
-    my $supported_apis = {};
-    foreach my $item (@{$contents->{items}}) {
-        my $id          = $item->{id};
-        my $name        = $item->{name};
-        my $version     = $item->{version};
-        my $title       = $item->{title};
-        my $description = $item->{description};
-        my $url         = $item->{discoveryRestUrl};
-        $supported_apis->{$id} = WWW::Google::APIDiscovery::API->new(
-            id          => $id,
-            name        => $name,
-            version     => $version,
-            title       => $title,
-            description => $description,
-            url         => $url);
-    }
-
-    $self->apis($supported_apis);
-}
+has id          => (is => 'ro', required => 1);
+has name        => (is => 'ro', required => 1);
+has title       => (is => 'ro', required => 1);
+has version     => (is => 'ro', required => 1);
+has url         => (is => 'ro', required => 1);
+has description => (is => 'ro', required => 1);
 
 =head1 AUTHOR
 
@@ -131,7 +38,7 @@ bug as I make changes.
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc WWW::Google::APIDiscovery
+    perldoc WWW::Google::APIDiscovery::API
 
 You can also look for information at:
 
@@ -195,4 +102,4 @@ OF THE PACKAGE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 =cut
 
-1; # End of WWW::Google::APIDiscovery
+1; # End of WWW::Google::APIDiscovery::API
