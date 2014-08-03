@@ -1,5 +1,11 @@
 Revision history for WWW-Google-APIDiscovery
 
+0.08    Sun Aug 03 04:05:06 2014
+        - Added method supported_apis() to WWW::Google::APIDiscovery class.
+        - Fixed the code in the SYNOPSIS of WWW::Google::APIDiscovery.
+        - Added more attributes to the WWW::Google::APIDiscovery::API::MetaData class.
+        - Added details of every attributes of WWW::Google::APIDiscovery::API::MetaData class.
+
 0.07    Sun Aug 03 03:28:15 2014
         - Updated method discover() to return object of type WWW::Google::APIDiscovery::API::MetaData.
         - Updated "Name" in the pod document of WWW::Google::APIDiscovery::API::MetaData.

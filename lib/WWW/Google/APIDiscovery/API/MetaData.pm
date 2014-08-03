@@ -1,6 +1,6 @@
 package WWW::Google::APIDiscovery::API::MetaData;
 
-$WWW::Google::APIDiscovery::API::MetaData::VERSION = '0.07';
+$WWW::Google::APIDiscovery::API::MetaData::VERSION = '0.08';
 
 use 5.006;
 use Moo;
@@ -12,10 +12,19 @@ WWW::Google::APIDiscovery::API::MetaData - Placeholder for supported APIS Meta D
 
 =head1 VERSION
 
-Version 0.07
+Version 0.08
 
 =cut
 
+has id                => (is => 'ro');
+has name              => (is => 'ro');
+has title             => (is => 'ro');
+has description       => (is => 'ro');
+has revision          => (is => 'ro');
+has etag              => (is => 'ro');
+has kind              => (is => 'ro');
+has discoveryVersion  => (is => 'ro');
+has icons             => (is => 'ro');
 has ownerDomain       => (is => 'ro');
 has ownerName         => (is => 'ro');
 has documentationLink => (is => 'ro');
@@ -29,6 +38,50 @@ has parameters        => (is => 'ro');
 has auth              => (is => 'ro');
 has schemas           => (is => 'ro');
 has resources         => (is => 'ro');
+
+=head1 METHODS
+
+=head2 id()
+
+=head2 name()
+
+=head2 title()
+
+=head2 description()
+
+=head2 revision()
+
+=head2 etag()
+
+=head2 kind()
+
+=head2 discoveryVersion()
+
+=head2 icons()
+
+=head2 ownerDomain()
+
+=head2 ownerName()
+
+=head2 documentationLink()
+
+=head2 protocol()
+
+=head2 baseUrl()
+
+=head2 basePath()
+
+=head2 rootUrl()
+
+=head2 servicePath()
+
+=head2 parameters()
+
+=head2 auth()
+
+=head2 schemas()
+
+=head2 resources()
 
 =head1 AUTHOR
 

@@ -1,6 +1,6 @@
 package WWW::Google::APIDiscovery;
 
-$WWW::Google::APIDiscovery::VERSION = '0.07';
+$WWW::Google::APIDiscovery::VERSION = '0.08';
 
 use 5.006;
 use JSON;
@@ -20,7 +20,7 @@ WWW::Google::APIDiscovery - Interface to Google API Discovery Service.
 
 =head1 VERSION
 
-Version 0.07
+Version 0.08
 
 =cut
 
@@ -45,9 +45,10 @@ features might change unexpectedly until it graduates.
     use WWW::Google::APIDiscovery;
 
     my $google = WWW::Google::APIDiscovery->new();
+    my $apis   = $google->supported_apis();
     my $meta   = $google->discover('customsearch:v1');
 
-    print "Title: ", $meta->api_title, "\n";
+    print "Title: ", $meta->title, "\n";
 
 =cut
 
@@ -86,6 +87,18 @@ sub discover {
     my $contents = from_json($response->{content});
 
     return WWW::Google::APIDiscovery::API::MetaData->new($contents);
+}
+
+=head2 supported_apis()
+
+Returns the list of supported APIs of type L<WWW::Google::APIDiscovery::API>.
+
+=cut
+
+sub supported_apis {
+    my ($self) = @_;
+
+    return $self->{apis};
 }
 
 sub _supported_apis {
