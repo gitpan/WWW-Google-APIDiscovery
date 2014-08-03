@@ -1,6 +1,6 @@
 package WWW::Google::APIDiscovery;
 
-$WWW::Google::APIDiscovery::VERSION = '0.06';
+$WWW::Google::APIDiscovery::VERSION = '0.07';
 
 use 5.006;
 use JSON;
@@ -20,7 +20,7 @@ WWW::Google::APIDiscovery - Interface to Google API Discovery Service.
 
 =head1 VERSION
 
-Version 0.06
+Version 0.07
 
 =cut
 
@@ -85,7 +85,7 @@ sub discover {
     my $response = $self->get($api->url);
     my $contents = from_json($response->{content});
 
-    die Dumper($contents);
+    return WWW::Google::APIDiscovery::API::MetaData->new($contents);
 }
 
 sub _supported_apis {

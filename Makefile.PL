@@ -8,7 +8,7 @@ WriteMakefile(
     AUTHOR             => q{Mohammad S Anwar <mohammad.anwar@yahoo.com>},
     VERSION_FROM       => 'lib/WWW/Google/APIDiscovery.pm',
     ABSTRACT_FROM      => 'lib/WWW/Google/APIDiscovery.pm',
-    LICENSE            => 'Artistic_2_0',
+    LICENSE            => 'artistic_2',
     PL_FILES           => {},
     MIN_PERL_VERSION   => 5.006,
     CONFIGURE_REQUIRES => {
