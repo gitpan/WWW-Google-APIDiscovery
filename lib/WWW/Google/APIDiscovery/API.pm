@@ -1,6 +1,6 @@
 package WWW::Google::APIDiscovery::API;
 
-$WWW::Google::APIDiscovery::API::VERSION = '0.08';
+$WWW::Google::APIDiscovery::API::VERSION = '0.09';
 
 use 5.006;
 use Moo;
@@ -12,7 +12,7 @@ WWW::Google::APIDiscovery::API - Placeholder for supported APIS.
 
 =head1 VERSION
 
-Version 0.08
+Version 0.09
 
 =cut
 
@@ -22,6 +22,20 @@ has title       => (is => 'ro', required => 1);
 has version     => (is => 'ro', required => 1);
 has url         => (is => 'ro', required => 1);
 has description => (is => 'ro', required => 1);
+
+=head1 METHODS
+
+=head2 id()
+
+=head2 name()
+
+=head2 title()
+
+=head2 version
+
+=head2 url()
+
+=head2 description()
 
 =head1 AUTHOR
 

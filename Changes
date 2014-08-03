@@ -1,5 +1,9 @@
 Revision history for WWW-Google-APIDiscovery
 
+0.09    Sun Aug 03 06:00:00 2014
+        - Added missing pre-requisite WWW::Google::UserAgent v0.07
+        - Added method exposed by WWW::Google::APIDiscovery::API
+
 0.08    Sun Aug 03 04:05:06 2014
         - Added method supported_apis() to WWW::Google::APIDiscovery class.
         - Fixed the code in the SYNOPSIS of WWW::Google::APIDiscovery.
