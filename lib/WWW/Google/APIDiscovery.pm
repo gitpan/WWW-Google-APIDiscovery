@@ -1,6 +1,6 @@
 package WWW::Google::APIDiscovery;
 
-$WWW::Google::APIDiscovery::VERSION = '0.09';
+$WWW::Google::APIDiscovery::VERSION = '0.10';
 
 use 5.006;
 use JSON;
@@ -20,7 +20,7 @@ WWW::Google::APIDiscovery - Interface to Google API Discovery Service.
 
 =head1 VERSION
 
-Version 0.09
+Version 0.10
 
 =cut
 

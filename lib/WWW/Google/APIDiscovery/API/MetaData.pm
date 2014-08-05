@@ -1,6 +1,6 @@
 package WWW::Google::APIDiscovery::API::MetaData;
 
-$WWW::Google::APIDiscovery::API::MetaData::VERSION = '0.09';
+$WWW::Google::APIDiscovery::API::MetaData::VERSION = '0.10';
 
 use 5.006;
 use Moo;
@@ -12,7 +12,7 @@ WWW::Google::APIDiscovery::API::MetaData - Placeholder for supported APIS Meta D
 
 =head1 VERSION
 
-Version 0.09
+Version 0.10
 
 =cut
 
