@@ -1,6 +1,6 @@
 package WWW::Google::APIDiscovery::API;
 
-$WWW::Google::APIDiscovery::API::VERSION = '0.10';
+$WWW::Google::APIDiscovery::API::VERSION = '0.11';
 
 use 5.006;
 use Moo;
@@ -12,7 +12,7 @@ WWW::Google::APIDiscovery::API - Placeholder for supported APIS.
 
 =head1 VERSION
 
-Version 0.10
+Version 0.11
 
 =cut
 
