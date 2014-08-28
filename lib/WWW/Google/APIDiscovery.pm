@@ -1,6 +1,6 @@
 package WWW::Google::APIDiscovery;
 
-$WWW::Google::APIDiscovery::VERSION = '0.12';
+$WWW::Google::APIDiscovery::VERSION = '0.13';
 
 use 5.006;
 use JSON;
@@ -20,7 +20,7 @@ WWW::Google::APIDiscovery - Interface to Google API Discovery Service.
 
 =head1 VERSION
 
-Version 0.12
+Version 0.13
 
 =cut
 
@@ -136,6 +136,10 @@ Mohammad S Anwar, C<< <mohammad.anwar at yahoo.com> >>
 =head1 REPOSITORY
 
 L<https://github.com/Manwar/WWW-Google-APIDiscovery>
+
+=head1 CONTRIBUTORS
+
+Gabor Szabo (szabgab)
 
 =head1 BUGS
 

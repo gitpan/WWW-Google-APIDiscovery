@@ -1,6 +1,6 @@
 package WWW::Google::APIDiscovery::API::MetaData;
 
-$WWW::Google::APIDiscovery::API::MetaData::VERSION = '0.12';
+$WWW::Google::APIDiscovery::API::MetaData::VERSION = '0.13';
 
 use 5.006;
 use Moo;
@@ -12,7 +12,7 @@ WWW::Google::APIDiscovery::API::MetaData - Placeholder for supported APIS Meta D
 
 =head1 VERSION
 
-Version 0.12
+Version 0.13
 
 =cut
 
@@ -90,6 +90,10 @@ Mohammad S Anwar, C<< <mohammad.anwar at yahoo.com> >>
 =head1 REPOSITORY
 
 L<https://github.com/Manwar/WWW-Google-APIDiscovery>
+
+=head1 CONTRIBUTORS
+
+Gabor Szabo (szabgab)
 
 =head1 BUGS
 
