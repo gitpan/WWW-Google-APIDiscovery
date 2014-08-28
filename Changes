@@ -1,5 +1,8 @@
 Revision history for WWW-Google-APIDiscovery
 
+0.14    Thu Aug 28 02:40:00 2014
+        - Updated pre-requisite module "WWW::Google::UserAgent" version 0.10.
+
 0.13    Thu Aug 28 02:20:00 2014
         - Added section "CONTRIBUTORS" to the pod document.
 

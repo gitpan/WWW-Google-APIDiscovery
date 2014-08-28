@@ -21,19 +21,19 @@ WriteMakefile(
         'Moo'                    => 0,
         'JSON'                   => 0,
         'namespace::clean'       => 0,
-        'WWW::Google::UserAgent' => '0.07'
-     },
+        'WWW::Google::UserAgent' => '0.10'
+    },
     dist  => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean => { FILES => 'WWW-Google-APIDiscovery-*' },
     (eval { ExtUtils::MakeMaker->VERSION(6.46) } ? (META_MERGE => {
-    'meta-spec' => { version => 2 },
-     resources => {
-         repository => {
-             type => 'git',
-             url  => 'https://github.com/Manwar/WWW-Google-APIDiscovery.git',
-             web  => 'https://github.com/Manwar/WWW-Google-APIDiscovery',
-         },
-     }})
+        'meta-spec' => { version => 2 },
+        resources => {
+            repository => {
+                type => 'git',
+                url  => 'https://github.com/Manwar/WWW-Google-APIDiscovery.git',
+                web  => 'https://github.com/Manwar/WWW-Google-APIDiscovery',
+            },
+        }})
      : ()
     ),
 );
