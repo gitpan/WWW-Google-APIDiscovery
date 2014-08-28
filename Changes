@@ -1,5 +1,9 @@
 Revision history for WWW-Google-APIDiscovery
 
+0.12    Thu Aug 28 02:00:00 2014
+        - Merged patch from Gabor Szabo about link to GitHub from META.
+        - Added secction "REPOSITORY" to the pod
+
 0.11    Sat Aug 09 00:05:00 2014
         - Tidied up README file.
 
